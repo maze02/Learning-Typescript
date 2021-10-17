@@ -1,4 +1,8 @@
 let apples: number = 5;
+
+//declaration and initialization done on the same line
+let strawberries = 10;
+
 let speed: string = 'fast';
 let hasName: boolean = true;
 
@@ -35,3 +39,15 @@ let point: { x: number; y: number } = {
 const logNumber: (i: number) => void = (i: number) => {
   console.log(i);
 };
+
+//When to use annotations
+// 1) Function that returns the 'any' type
+
+const json = '{"x": 10, "y": 20}';
+const coordinates = JSON.parse(json);
+console.log(coordinates); // type: any
+
+//Fixing the 'Any' Type
+
+const coordinates2: { x: number; y: number } = JSON.parse(json);
+console.log(coordinates2); //type: { x: number; y: number }
