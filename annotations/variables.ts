@@ -26,3 +26,12 @@ let point: { x: number; y: number } = {
   x: 10,
   y: 20,
 };
+
+//Function
+
+//Function that takes in the argument number and returns nothing (/\ void)
+//First bit is a description of a function, after the equal sign is where the implementation is provided
+//i.e. the name, what it does and then after the equal sign , its implementation
+const logNumber: (i: number) => void = (i: number) => {
+  console.log(i);
+};
