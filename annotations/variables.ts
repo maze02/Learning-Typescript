@@ -51,3 +51,13 @@ console.log(coordinates); // type: any
 
 const coordinates2: { x: number; y: number } = JSON.parse(json);
 console.log(coordinates2); //type: { x: number; y: number }
+
+//2) When we declare a variable on one line and initialize it later
+let words = ['red', 'green', 'blue'];
+let foundWord: boolean; //let foundWord = false would be better, but here's an example of initialisation
+
+for (let i = 0; i < words.length; i++) {
+  if (words[i] === 'green') {
+    foundWord = true;
+  }
+}
