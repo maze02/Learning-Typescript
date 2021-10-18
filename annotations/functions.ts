@@ -19,3 +19,30 @@ function divide(a: number, b: number): number {
 const multiply = function (a: number, b: number): number {
   return a * b;
 };
+
+//void functions (returns  no value/ or returns null or undefined)
+const logger = (message: string): void => {
+  console.log(message);
+};
+
+//never functions -> means you're never going to reach the end of this function
+//so never going to execute the function completely, at some point we're going to throw an error and exit the function early without returning any value
+
+//*rare/big corner case <------------------------------
+const throwError = (message: string): never => {
+  throw new Error(message);
+};
+
+//variations of the scenarios
+const throwErrorS = (message: string): string => {
+  if (!message) {
+    throw new Error(message);
+  }
+  return message;
+};
+
+const throwErrorV = (message: string): void => {
+  if (!message) {
+    throw new Error(message);
+  }
+};
