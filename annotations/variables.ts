@@ -64,10 +64,14 @@ for (let i = 0; i < words.length; i++) {
 
 //3) Vriable whose type cannot be inferred correctly
 let numbers = [-10, -1, -12];
-let numberAboveZero: boolean | number = false;
+let numberAboveZero: boolean | number = false; //character | is a pipe
 
 for (let i = 0; i < numbers.length; i++) {
   if (numbers[i] > 0) {
     numberAboveZero = numbers[i];
   }
 }
+
+//Example scenarios
+//1. Trying to find a users favorite piece of media and user's choices of media are a blog post or an image or a book or a movie etc...
+// let usersFavoriteMedia : Book | Image | Movie;  => use pipe | to express possible different pipes.
