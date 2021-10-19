@@ -36,3 +36,16 @@ carMakers.map((car: string): string => {
 });
 
 //corner cases:
+//flexible types
+
+const importantDates = [new Date(), '2030-10-10']; //if nitialize with both types only required, might not need to add annotation
+
+const importantDates2: (string | Date)[] = []; //manual annotation
+const onlyDateObjArr: Date[] = [];
+const importantDates3: (string | Date)[] = [new Date()]; //want to initialize with date
+
+importantDates2.push('2030-10-10');
+importantDates2.push(new Date());
+//importantDates.push(100); would show up as an error
+
+//Tuple
