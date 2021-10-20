@@ -1,5 +1,5 @@
 //classes in ES2015 JS (more or less)
-class Vehicle {
+class Vehicle1 {
   //blueprint of what a vehicle should be
   //always capitalize the name of class like in JS
   drive(): void {
@@ -12,9 +12,15 @@ class Vehicle {
 }
 
 //extends tells typescript that we want to inherit all the methods inside of the Vehicles class i.e. not rewrite them -> basically copy pastes them
-class Car extends Vehicle {}
+class Car2 extends Vehicle1 {
+  //car is the child class and vehicle is the superclass or the parent class
+  drive(): void {
+    //over-riding methods
+    console.log('vroom');
+  }
+}
 
 //instance of a class
-const vehicle = new Vehicle();
-vehicle.drive();
-vehicle.honk();
+const vehicle2 = new Car2();
+vehicle2.drive(); //method over-ridden in the child class
+vehicle2.honk();
